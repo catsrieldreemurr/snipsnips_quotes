@@ -1,11 +1,13 @@
 const express = require("express");
 const api = require("./routes/api")
+const testRoutes = require("./routes/testing")
 
 const db = require("./util/db")
 
 const app = express()
 
 app.use("/api_v1", api)
+app.use("/api_v1/testing", testRoutes)
 
 async function ConnectDB(){
   try{
