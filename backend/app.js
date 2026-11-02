@@ -12,8 +12,12 @@ async function ConnectDB(){
     await db.authenticate()
     await db.sync();
 
-    console.log("Successfully Connected to the Database!");
+    console.log("\nSuccessfully Connected to the Database!");
     app.listen(3000)
+
+    console.log("-----------------------------------")
+    console.log("Server is running at http://localhost:3000");
+    console.log("-----------------------------------")
 
 
   } catch ( err ) {
