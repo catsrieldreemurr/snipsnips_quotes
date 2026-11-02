@@ -4,4 +4,4 @@ const Router = express.Router();
 
 Router.get("/greeting", greetingController.getRandomGreeting)
 
-export default Router;
+module.exports = Router;
