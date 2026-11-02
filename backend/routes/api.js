@@ -1,8 +1,7 @@
-import express from "express";
-import { getRandomGreeting } from "../controllers/greetingController.js"
-
+const express = require("express");
+const greetingController = require("../controllers/greetingController")
 const Router = express.Router();
 
-Router.get("/greeting", getRandomGreeting)
+Router.get("/greeting", greetingController.getRandomGreeting)
 
 export default Router;

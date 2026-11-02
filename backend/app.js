@@ -1,8 +1,8 @@
-import express from "express";
-import greetings from "./routes/api.js"
+const express = require("express");
+const api = require("./routes/api")
 
 const app = express()
 
-app.use("/api_v1", greetings)
+app.use("/api_v1", api)
 
 app.listen(3000)
