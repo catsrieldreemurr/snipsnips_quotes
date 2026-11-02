@@ -2,6 +2,7 @@ const express = require("express");
 const testController = require("../controllers/testController")
 const Router = express.Router();
 
-Router.get("/getTestUser", testController.getNewTestQuote)
+Router.get("/getCreateTestUser", testController.getNewTestQuote)
+Router.get("/getAllTestUsers", testController.getAllQuotesTest)
 
 module.exports = Router;
