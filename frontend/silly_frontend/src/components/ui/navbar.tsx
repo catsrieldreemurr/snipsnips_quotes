@@ -2,7 +2,7 @@
 import Typography from "./typography";
 import { Popover, PopoverContent, PopoverTrigger } from "./popover";
 
-import { Menu, Info, Calendar, Book, Award, KeySquare, LockOpen } from "lucide-react";
+import { Menu, Calendar, Book, Award, KeySquare, LockOpen } from "lucide-react";
 import { Button } from "./button";
 
 import NavbarLinks from "./navbarLinks";
@@ -13,7 +13,6 @@ export default function Navbar(){
       <Typography variant="h1" isBold>Snip Snips Quotes</Typography>
 
       <div className="gap-5 hidden sm:flex text-white">
-        <NavbarLinks href="/" icon={<Info/>}>Info</NavbarLinks>
         <NavbarLinks href="/" icon={<Calendar/>}>Quote of the Day</NavbarLinks>
         <NavbarLinks href="/" icon={<Book/>}>All Quotes</NavbarLinks>
         <NavbarLinks href="/" icon={<Award/>}>Leaderboards</NavbarLinks>
@@ -26,7 +25,6 @@ export default function Navbar(){
           <PopoverTrigger render={<Button><Menu/></Button>}></PopoverTrigger>
 
           <PopoverContent> 
-            <NavbarLinks href="/" icon={<Info/>}>Info</NavbarLinks>
             <NavbarLinks href="/" icon={<Calendar/>}>Quote of the Day</NavbarLinks>
             <NavbarLinks href="/" icon={<Book/>}>All Quotes</NavbarLinks>
             <NavbarLinks href="/" icon={<Award/>}>Leaderboards</NavbarLinks>
