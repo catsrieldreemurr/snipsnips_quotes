@@ -16,7 +16,7 @@ export default function Navbar(){
         <NavbarLinks href="/" icon={<Calendar/>}>Quote of the Day</NavbarLinks>
         <NavbarLinks href="/" icon={<Book/>}>All Quotes</NavbarLinks>
         <NavbarLinks href="/" icon={<Award/>}>Leaderboards</NavbarLinks>
-        <NavbarLinks href="/" icon={<KeySquare/>}>Register</NavbarLinks>
+        <NavbarLinks href="/register" icon={<KeySquare/>}>Register</NavbarLinks>
         <NavbarLinks href="/" icon={<LockOpen/>}>Log in</NavbarLinks>
       </div>
 
@@ -28,7 +28,7 @@ export default function Navbar(){
             <NavbarLinks href="/" icon={<Calendar/>}>Quote of the Day</NavbarLinks>
             <NavbarLinks href="/" icon={<Book/>}>All Quotes</NavbarLinks>
             <NavbarLinks href="/" icon={<Award/>}>Leaderboards</NavbarLinks>
-            <NavbarLinks href="/" icon={<KeySquare/>}>Register</NavbarLinks>
+            <NavbarLinks href="/register" icon={<KeySquare/>}>Register</NavbarLinks>
             <NavbarLinks href="/" icon={<LockOpen/>}>Log in</NavbarLinks>
           </PopoverContent>
         </Popover>

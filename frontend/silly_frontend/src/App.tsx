@@ -1,9 +1,9 @@
-import Navbar from "./components/ui/navbar";
+import ScreenContainer from "./components/ui/screenContainer";
 
 export default function App(){
   return (
-    <div className="bg-gray-600 min-h-screen">
-      <Navbar></Navbar>
-    </div>
+    <ScreenContainer>
+
+    </ScreenContainer>
   )
 }
