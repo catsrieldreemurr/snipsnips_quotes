@@ -26,9 +26,9 @@ exports.postCreateUser = async (req, res, next) => {
         else {
           console.log("Existing User Found.")
 
-          res.status(400).json({
+          res.status(409).json({
             "failed": true, 
-            "errorMessage": "Username Already Exists!"
+            "errorMessage": "This Username Already Exists. Please try again"
           })
         } 
     } 
