@@ -74,13 +74,13 @@ export default function RegisterScreen(){
                     setUsername(e.target.value)
                 }}></Input>
 
-                <Label htmlFor="password" className="p-5 text-center">Password</Label>
+                <Label htmlFor="password" className="p-5">Password</Label>
                 <Input type="password" name="password" id="password" placeholder="AV3ryS4feP4ssw0rd" value={password}
                 onChange={(e) => {
                     setPassword(e.target.value)
                 }}></Input>
                 
-                <Button type="submit">Submit</Button>
+                <Button type="submit" className={"m-5"}>Submit</Button>
             </form>
         </ScreenContainer>
     )
