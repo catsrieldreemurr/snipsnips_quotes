@@ -8,9 +8,8 @@ interface SetProps{
 
 export default function NavbarLinks({children, href, icon}:SetProps){
   return (
-    <div className="flex gap-2 flex-row hover:bg-gray-500 p-3 rounded-xl">
-      {icon}
-      <a href={href}>{children}</a>
+    <div className="flex gap-2 flex-row items-center">
+      <a className="hover:bg-gray-500 p-3 rounded-xl" href={href}><div className="flex gap-5">{icon}{children}</div></a>
     </div>
   )
 }
