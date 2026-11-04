@@ -1,7 +1,17 @@
 const bcrypt = require("bcryptjs")
 const userModel = require("../models/user")
 
+const { validationResult } = require('express-validator');
+
 exports.postCreateUser = async (req, res, next) => {
+  const result = validationResult(req);
+
+  if(!result.isEmpty()){
+    return res.status(400).json({
+      "failed": true,
+      "errorMessage": result.array()[0].msg
+    })
+  }
     try{
         const pass = req.body.password
         const name = req.body.username.trim()

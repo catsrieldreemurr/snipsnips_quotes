@@ -80,7 +80,7 @@ export default function RegisterScreen(){
                     setPassword(e.target.value)
                 }}></Input>
                 
-                <Button type="submit" className={"m-5"}>Submit</Button>
+                <Button disabled={(hasFailed.hasFailed == false && hasFailed.hasFinished)} type="submit" className={"m-5"}>Submit</Button>
             </form>
         </ScreenContainer>
     )
