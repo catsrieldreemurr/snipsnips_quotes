@@ -3,8 +3,16 @@ const userModel = require("../models/user")
 
 exports.postCreateUser = async (req, res, next) => {
     try{
-        const pass = req.body.password.trim()
+        const pass = req.body.password
         const name = req.body.username.trim()
+
+        if(name.length > 20){
+          console.log(`Name is too long: ${name} (Length: ${name.length})`)
+          return res.status(422).json({
+            "failed": true,
+            "errorMessage": "Usernames must be 20 Characters or Less."
+          })
+        }
 
         const userExists = await userModel.findOne({
           where: {
