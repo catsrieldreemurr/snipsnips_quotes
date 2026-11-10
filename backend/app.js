@@ -1,7 +1,11 @@
 const express = require("express");
+const cors = require("cors")
+
 const api = require("./routes/api")
 const testRoutes = require("./routes/testing")
-const cors = require("cors")
+const users = require("./routes/users")
+
+const clerkMiddleware = require("@clerk/express")
 
 const db = require("./util/db")
 
@@ -9,9 +13,11 @@ const app = express();
 
 app.use(cors())
 app.use(express.json())
+app.use(clerkMiddleware.clerkMiddleware())
 
 app.use("/api_v1", api)
 app.use("/api_v1/testing", testRoutes)
+app.use("/api_v1/users", users)
 
 async function ConnectDB(){
   try{
