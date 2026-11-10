@@ -6,6 +6,7 @@ import { Menu, Calendar, Book, Award, KeySquare, LockOpen } from "lucide-react";
 import { Button } from "./button";
 
 import NavbarLinks from "./navbarLinks";
+import { Show, SignInButton, SignUpButton, UserButton } from "@clerk/react";
 
 export default function Navbar(){
   return (
@@ -16,8 +17,18 @@ export default function Navbar(){
         <NavbarLinks href="/" icon={<Calendar/>}>Quote of the Day</NavbarLinks>
         <NavbarLinks href="/" icon={<Book/>}>All Quotes</NavbarLinks>
         <NavbarLinks href="/" icon={<Award/>}>Leaderboards</NavbarLinks>
-        <NavbarLinks href="/register" icon={<KeySquare/>}>Register</NavbarLinks>
-        <NavbarLinks href="/" icon={<LockOpen/>}>Log in</NavbarLinks>
+                
+        <header className="flex">
+          <Show when={"signed-out"}>
+            <NavbarLinks href="/register" excludeRedirect  icon={<KeySquare/>}><SignUpButton/></NavbarLinks>
+            <NavbarLinks href="/" excludeRedirect icon={<LockOpen/>}><SignInButton/></NavbarLinks>
+          </Show>
+
+          <Show when={"signed-in"}>
+            <UserButton/>
+          </Show>
+        </header>
+
       </div>
 
       <div className="sm:hidden flex">
